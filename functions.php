@@ -7,8 +7,8 @@ function entriesForIndex()
 {
   include('inc/connection.php');
   try{
-  $sql = "SELECT title, date, id, tag FROM 'entries'
-  JOIN entries_tags ON entries.id = entries_tags.id JOIN tags ON entries_tags.tag_id = tags.tag_id ORDER BY date ASC";
+  $sql = "SELECT entries.title, entries.date, entries.id, tags.tag FROM 'entries'
+  JOIN entries_tags ON entries.id = entries_tags.entries_id JOIN tags ON entries_tags.tag_id = tags.tag_id ORDER BY date ASC";
   $results = $db->query($sql);
 
   }
