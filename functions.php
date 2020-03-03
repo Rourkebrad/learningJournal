@@ -10,6 +10,7 @@ function entriesForIndex()
   $sql = "SELECT entries.title, entries.date, entries.id, tags.tag FROM 'entries'
   JOIN entries_tags ON entries.id = entries_tags.entries_id JOIN tags ON entries_tags.tag_id = tags.tag_id ORDER BY date ASC";
   $results = $db->query($sql);
+  //$results = $db->query("INSERT INTO entries_tags (entries_id, tag_id) VALUES ($id, $tag_id)");
 
   }
   catch(Exception $e)
