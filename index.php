@@ -12,6 +12,8 @@ include('functions.php');
                           echo "<br>";
                           echo "<article><h1><a href='detail.php?id=" . $item['id'] . "'>" . "Title: " .   $item['title'] . " "  .  "<br></a></h1> ";
                           echo "<h2><time datetime=" . $item['date'] .">" .  date("F d, Y", strtotime($item['date'])) . "</time></h2> </article>";
+                          echo "<br>";
+                          echo $item['tag'];
                           echo "<hr>";
 
                         } ?>
