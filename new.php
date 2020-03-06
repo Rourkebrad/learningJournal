@@ -62,9 +62,7 @@
                         <textarea id="learned" rows="5" name="learned" value="<?php echo htmlspecialchars($learned); ?>"></textarea>
                         <label for="resources" class="button">Resources to Remember (seperate links by spaces)</label>
                         <textarea id="resources" rows="5" name="resources" value="<?php echo htmlspecialchars($resources); ?>"></textarea>
-                      <!--    <label for="tag" class="button">Tags (seperate by spacing)</label>
-                        <textarea id="tag" rows="5" name="tag" value="<?php //echo htmlspecialchars($tag); ?>"></textarea> -- >
-
+                      
                         <input type="submit" value="Add Entry" class="button">
                         <a href="index.php" class="button button-secondary">Cancel</a>
                     </form>
