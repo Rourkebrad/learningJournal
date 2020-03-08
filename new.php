@@ -3,7 +3,7 @@
     <?php
     include('inc/header.php');
     include('functions.php');
-    $title = $date = $time_spent = $learned = $resources = $tag = '';
+    $title = $date = $time_spent = $learned = $resources =  '';
 
 
 
@@ -62,7 +62,7 @@
                         <textarea id="learned" rows="5" name="learned" value="<?php echo htmlspecialchars($learned); ?>"></textarea>
                         <label for="resources" class="button">Resources to Remember (seperate links by spaces)</label>
                         <textarea id="resources" rows="5" name="resources" value="<?php echo htmlspecialchars($resources); ?>"></textarea>
-                      
+
                         <input type="submit" value="Add Entry" class="button">
                         <a href="index.php" class="button button-secondary">Cancel</a>
                     </form>
