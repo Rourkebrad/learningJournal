@@ -21,10 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   {
     $error_msg = "Please fill in all fields required.";
   }
-  /*  else if(count($dateMatch) !=3 || strlen($dateMatch[0]) !=2 || strlen($dateMatch[1]) !=2 || strlen($dateMatch) != 4 || !checkdate($dateMatch[1], $dateMatch[0], $dateMatch[2]))
-  {
-    $error_msg =  "Invalid date!";
-  }*/
+
   else
   {
     if(edit_entry($title, $date, $time_spent, $learned, $resources, $id))
@@ -40,11 +37,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   }
   }
-
-
-
-
-
 
 ?>
 

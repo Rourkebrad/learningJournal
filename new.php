@@ -1,11 +1,8 @@
-<!DOCTYPE html>
 <html>
     <?php
     include('inc/header.php');
     include('functions.php');
     $title = $date = $time_spent = $learned = $resources =  '';
-
-
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -14,30 +11,34 @@
       $time_spent = trim(filter_input(INPUT_POST,'time_spent', FILTER_SANITIZE_NUMBER_INT));
       $learned = trim(filter_input(INPUT_POST,'learned', FILTER_SANITIZE_STRING));
       $resources = trim(filter_input(INPUT_POST,'resources', FILTER_SANITIZE_STRING));
-      $tag = trim(filter_input(INPUT_POST,'tag', FILTER_SANITIZE_STRING));
-
-      $dateMatch = explode('/', $date);
 
 
-    if(empty($title) || empty($date) || empty($time_spent) || empty($learned) || empty($resources) || empty($tag))
+    if($date < '1900-01-01')
+    {
+      echo "Date is invalid, please try again";
+    }
+    else
+    {
+    if(empty($title) || empty($date) || empty($time_spent) || empty($learned) || empty($resources))
     {
       $error_msg = "Please fill in all fields required.";
     }
 
     else
     {
-      if (add_entry($title, $date, $time_spent, $learned, $resources, $tag))
+      if (add_entry($title, $date, $time_spent, $learned, $resources))
       {
         header('Location: index.php');
         exit;
       }
       else
         {
-            $error_msg = "Could not add project";
+            $error_msg = "Could not add project, please try again.";
         }
 
     }
   }
+}
     ?>
 
         <section>
