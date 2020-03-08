@@ -3,6 +3,7 @@ include('inc/header.php');
 include('functions.php');
 $id = trim(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT));
 $entry = get_entry($id);
+
 ?>
 
     <section>
