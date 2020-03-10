@@ -17,6 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   $resources = trim(filter_input(INPUT_POST,'resources', FILTER_SANITIZE_STRING));
   $id = trim(filter_input(INPUT_POST,'id', FILTER_SANITIZE_STRING));
 
+
   if(empty($title) || empty($date) || empty($time_spent) || empty($learned) || empty($resources))
   {
     $error_msg = "Please fill in all fields required.";
