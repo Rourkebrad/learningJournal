@@ -7,7 +7,7 @@ function entriesForIndex()
   include('inc/connection.php');
   try{
     $sql = "SELECT title, date, id FROM 'entries'
-     ORDER BY date ASC";
+     ORDER BY date DESC";
 
   $results = $db->query($sql);
 

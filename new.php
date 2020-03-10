@@ -13,7 +13,7 @@
       $resources = trim(filter_input(INPUT_POST,'resources', FILTER_SANITIZE_STRING));
 
 
-    if($date < '1900-01-01')
+    if($date < '1900-01-01' OR $date > date('Y-m-d'))
     {
       echo "Date is invalid, please try again";
     }
